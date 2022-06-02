@@ -1,5 +1,5 @@
 {% set name = "requests-magpie" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f627e3951a262c2ccdffd237c57d1d695f0512cc6647fb0d9cd6eb170a9414ec
+  sha256: c4260f3bc7112d8d98259af1785cbf870faf70c1c1a2c0c040e21506b92fede1
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: ISC
   license_family: OTHER
   license_file: LICENSE
-  summary: 'A Magpie authentication handler for python-requests'
+  summary: A Magpie authentication handler for python-requests
   dev_url: https://github.com/Ouranosinc/requests-magpie
 
 extra:
