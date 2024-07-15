@@ -16,13 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
-    - setuptools
+    - python >=3.8
+    - flit >=3.9,<4.0
     - pip
   run:
-    - python >=3.5
-    - requests >=1.1.0
-
+    - python >=3.8
+    - requests >=2.32.2
 test:
   imports:
     - requests_magpie
