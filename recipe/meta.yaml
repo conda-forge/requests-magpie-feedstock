@@ -1,16 +1,16 @@
 {% set name = "requests-magpie" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 739e2a29af6d537f70fc30facf319f9cccb0c6501bcfe2bb588f3c63a1ab69b9
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: bc9a042362421b5cf6de0b4f9b5443f75b550fb818572c5c160c4b671f1a8a04
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
